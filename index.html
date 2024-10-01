@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات CSS - جوتكي للتعليم</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #e8491d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #35424a;
+        }
+
+        h3 {
+            color: #e8491d;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #35424a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #e8491d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مقالات CSS</h1>
+    </header>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="programming.html">مقالات البرمجة</a>
+        <a href="cybersecurity.html">مقالات الأمن السيبراني</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="suggestions.html">اقتراحات</a>
+    </nav>
+
+    <div class="container">
+        <h2>أساسيات CSS</h2>
+        <p>مقدمة: CSS (Cascading Style Sheets) هي لغة تنسيق تستخدم لتحديد مظهر صفحات الويب. من خلال CSS، يمكن للمطورين التحكم في تصميم الصفحة، بما في ذلك الألوان، الخطوط، التخطيط، والمسافات.</p>
+
+        <h3>1. ما هي CSS؟</h3>
+        <p>CSS تُستخدم لفصل محتوى الموقع عن التصميم. يسمح ذلك للمطورين بتغيير تصميم موقع الويب دون الحاجة لتغيير المحتوى الفعلي.</p>
+
+        <h3>1.1. كيفية استخدام CSS</h3>
+        <p>يمكن استخدام CSS بعدة طرق:</p>
+        <ul>
+            <li>الأنماط المضمنة: تُستخدم داخل عنصر HTML باستخدام خاصية style.</li>
+            <li>الأنماط الداخلية: تُستخدم داخل قسم <code>&lt;style&gt;</code> في رأس HTML.</li>
+            <li>الأنماط الخارجية: تُستخدم في ملفات CSS منفصلة تُربط في صفحة HTML.</li>
+        </ul>
+        
+        <h4>مثال على الأنماط المضمنة:</h4>
+        <code>&lt;p style="color: blue;"&gt;هذا نص أزرق.&lt;/p&gt;</code>
+        
+        <h4>مثال على الأنماط الداخلية:</h4>
+        <code>
+&lt;head&gt;<br>
+  &lt;style&gt;<br>
+    p {<br>
+      color: green;<br>
+    }<br>
+  &lt;/style&gt;<br>
+&lt;/head&gt;
+        </code>
+        
+        <h4>مثال على الأنماط الخارجية:</h4>
+        <code>
+&lt;head&gt;<br>
+  &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;<br>
+&lt;/head&gt;
+        </code>
+
+        <h3>2. القواعد الأساسية في CSS</h3>
+        <h4>2.1. تحديد العناصر</h4>
+        <p>تستخدم CSS تحديدات مختلفة لاستهداف العناصر:</p>
+        
+        <h5>التحديد عن طريق الاسم:</h5>
+        <code>p {<br>
+  color: red;<br>
+}</code>
+
+        <h5>التحديد عن طريق الفئة:</h5>
+        <code>.intro {<br>
+  font-size: 20px;<br>
+}</code>
+
+        <h5>التحديد عن طريق المعرف:</h5>
+        <code>#header {<br>
+  background-color: blue;<br>
+}</code>
+
+        <h4>2.2. خصائص CSS</h4>
+        <p>تتضمن CSS مجموعة من الخصائص التي يمكن تطبيقها على العناصر، مثل:</p>
+        
+        <h5>الألوان:</h5>
+        <code>color: red; /* لون النص */<br>
+background-color: yellow; /* لون الخلفية */</code>
+
+        <h5>الخطوط:</h5>
+        <code>font-family: Arial, sans-serif; /* نوع الخط */<br>
+font-size: 16px; /* حجم الخط */<br>
+font-weight: bold; /* وزن الخط */</code>
+
+        <h5>التخطيط:</h5>
+        <code>margin: 10px; /* الهوامش */<br>
+padding: 5px; /* الحشوة */<br>
+border: 1px solid black; /* الحدود */</code>
+
+        <h3>3. التخطيط باستخدام CSS</h3>
+        <h4>3.1. نموذج الصندوق (Box Model)</h4>
+        <p>يعتبر نموذج الصندوق هو الأساس لفهم تخطيط العناصر في CSS. يتكون كل عنصر من:</p>
+        <ul>
+            <li>المحتوى: المحتوى الفعلي (النص، الصور).</li>
+            <li>الحشوة: المساحة بين المحتوى وحدود العنصر.</li>
+            <li>الحدود: الخط المحيط بالعنصر.</li>
+            <li>الهامش: المساحة بين حدود العنصر والعناصر الأخرى.</li>
+        </ul>
+
+        <h4>3.2. استخدام Flexbox و Grid</h4>
+        <p>يمكن استخدام تقنيتي Flexbox و CSS Grid لتسهيل التخطيط:</p>
+        <ul>
+            <li>Flexbox: يوفر طريقة مرنة لتوزيع المساحة بين العناصر في حاوية.</li>
+            <li>Grid: يسمح بتقسيم الصفحة إلى شبكة من الصفوف والأعمدة.</li>
+        </ul>
+
+        <h3>4. وسائل الإعلام (Media Queries)</h3>
+        <p>تُستخدم وسائل الإعلام لجعل تصميمات CSS تستجيب لأحجام الشاشات المختلفة. مثال:</p>
+        <code>
+@media (max-width: 600px) {<br>
+  body {<br>
+    background-color: lightblue;<br>
+  }<br>
+}
+        </code>
+
+        <h3>5. الخاتمة</h3>
+        <p>CSS هي لغة قوية ومهمة لتصميم الويب. بفهم أساسيات CSS، يمكن للمطورين إنشاء صفحات ويب جذابة ومريحة للمستخدمين.</p>
+        
+        <h3>اقتراحات</h3>
+        <p>لديك اقتراحات حول مقالات CSS؟ اترك اقتراحك هنا:</p>
+        <form>
+            <textarea placeholder="اكتب اقتراحك هنا..." rows="4"></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>
